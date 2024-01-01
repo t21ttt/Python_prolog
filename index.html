@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prolog Todolist</title>
+</head>
+<body>
+    <h1>Prolog Todolist</h1>
+    <form action="/execute" method="post">
+        <label for="command">Select a command:</label>
+        <select name="command" id="command">
+            {% for command in commands %}
+            <option value="{{ command.name }}">{{ command.description }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Execute">
+    </form>
+</body>
+</html>

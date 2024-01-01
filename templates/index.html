@@ -1,0 +1,10 @@
+<h1>Eye Bank Management System</h1>
+<h3>Available commands:</h3>
+<form action="/execute" method="post">
+  <select name="command">
+    {% for command in commands %}
+      <option value="{{ loop.index }}">{{ command }}</option>
+    {% endfor %}
+  </select>
+  <input type="submit" value="Execute">
+</form>
